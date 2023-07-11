@@ -63,7 +63,7 @@ namespace REGEXASSIGNMENT
         }
         public void Password(string pass)
         {
-            string pattern = "^[A-Z]{1}[a-z 0-9 !@#$%^&*()_+=.,:;?/|]{7,}$";
+            string pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]){1}.{8,}$";
             //string pattern = @"^[A-Z]{1}.{8,}$";
             if (Regex.IsMatch(pass, pattern))
             {

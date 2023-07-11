@@ -24,5 +24,18 @@ namespace REGEXASSIGNMENT
             }
 
         }
+        public void LastName(string name)
+        {
+            string pattern = "^[A-Z]{1}[a-z]{2,}$";
+            if (Regex.IsMatch(name, pattern))
+            {
+                Console.WriteLine("VALID FIRST NAME");
+            }
+            else
+            {
+                Console.WriteLine("NOT VALID FIRST NAME");
+            }
+
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace REGEXASSIGNMENT
 {
@@ -35,7 +36,18 @@ namespace REGEXASSIGNMENT
             {
                 Console.WriteLine("NOT VALID FIRST NAME");
             }
-
+        }
+        public void Email(string email)
+        {
+            string pattern = "^[A-Z a-z 0-9 ._%+-]+@[A-Z a-z 0-9 .-]+.[A-Z a-z]{2,}$";
+            if (Regex.IsMatch(email,pattern))
+            {
+                Console.WriteLine("VALID Email ID");
+            }
+            else
+            {
+                Console.WriteLine("NOT VALID Email ID");
+            }
         }
     }
 }

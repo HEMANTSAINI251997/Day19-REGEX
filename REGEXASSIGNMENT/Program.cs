@@ -15,6 +15,7 @@ namespace REGEXASSIGNMENT
             {
                 Console.WriteLine("1. For First Name ");
                 Console.WriteLine("2. For Last Name");
+                Console.WriteLine("3. For Email ID");
                 Console.WriteLine("ENTER YOUR CHOICE");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -28,6 +29,11 @@ namespace REGEXASSIGNMENT
                         Console.WriteLine("ENTER LAST NAME");
                         string lastname = Console.ReadLine();
                         registration.LastName(lastname);
+                        break;
+                    case 3:
+                        Console.WriteLine("ENTER EMAIL ID");
+                        string email = Console.ReadLine();
+                        registration.Email(email);
                         break;
                     default:
                         Console.WriteLine("Invalid Input");

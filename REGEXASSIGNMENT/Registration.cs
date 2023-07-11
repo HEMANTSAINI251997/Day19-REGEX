@@ -61,5 +61,18 @@ namespace REGEXASSIGNMENT
                 Console.WriteLine("NOT A VALID MOBILE NUMBER");
             }
         }
+        public void Password(string pass)
+        {
+            //string pattern = "^[A-Z a-z 0-9 !@#$%^&*()_+=.,:;?/|]{8,}$";
+            string pattern = @"^.{8,}$";
+            if (Regex.IsMatch(pass, pattern))
+            {
+                Console.WriteLine("VALID PASSWORD");
+            }
+            else
+            {
+                Console.WriteLine("NOT A VALID PASSWORD");
+            }
+        }
     }
 }

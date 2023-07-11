@@ -17,6 +17,7 @@ namespace REGEXASSIGNMENT
                 Console.WriteLine("2. For Last Name");
                 Console.WriteLine("3. For Email ID");
                 Console.WriteLine("4. For Mobile Number");
+                Console.WriteLine("5. For Password Rules");
                 Console.WriteLine("ENTER YOUR CHOICE");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -47,6 +48,11 @@ namespace REGEXASSIGNMENT
                         {
                             Console.WriteLine("You Have Enter Wrong Number");
                         }
+                        break;
+                    case 5:
+                        Console.WriteLine("ENTER YOUR PASSWORD");
+                        string pass = Console.ReadLine();
+                        registration.Password(pass);
                         break;
                     default:
                         Console.WriteLine("Invalid Input");

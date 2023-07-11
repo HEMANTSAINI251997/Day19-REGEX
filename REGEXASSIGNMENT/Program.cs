@@ -16,6 +16,7 @@ namespace REGEXASSIGNMENT
                 Console.WriteLine("1. For First Name ");
                 Console.WriteLine("2. For Last Name");
                 Console.WriteLine("3. For Email ID");
+                Console.WriteLine("4. For Mobile Number");
                 Console.WriteLine("ENTER YOUR CHOICE");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -34,6 +35,18 @@ namespace REGEXASSIGNMENT
                         Console.WriteLine("ENTER EMAIL ID");
                         string email = Console.ReadLine();
                         registration.Email(email);
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter Mobile Number like e.g = +91 9999868626");
+                        string num=Console.ReadLine();
+                        if (num.Length == 14)
+                        {
+                            registration.Number(num);
+                        }
+                        else
+                        {
+                            Console.WriteLine("You Have Enter Wrong Number");
+                        }
                         break;
                     default:
                         Console.WriteLine("Invalid Input");

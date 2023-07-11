@@ -49,5 +49,17 @@ namespace REGEXASSIGNMENT
                 Console.WriteLine("NOT VALID Email ID");
             }
         }
+        public void Number(string num)
+        {
+            string pattern = "^[+]{1}[0-9]{2}\\s[0-9]{10}$";
+            if (Regex.IsMatch(num, pattern))
+            {
+                Console.WriteLine("VALID MOBILE NUMBER");
+            }
+            else
+            {
+                Console.WriteLine("NOT A VALID MOBILE NUMBER");
+            }
+        }
     }
 }
